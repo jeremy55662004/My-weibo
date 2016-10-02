@@ -3,12 +3,14 @@ autopublish@1.0.7
 autoupdate@1.2.11
 babel-compiler@6.9.1
 babel-runtime@0.1.11
+backbone@1.0.0
 base64@1.0.9
 binary-heap@1.0.9
 blaze@2.1.8
 blaze-html-templates@1.0.4
 blaze-tools@1.0.9
 boilerplate-generator@1.0.9
+bootstrap@1.0.1
 caching-compiler@1.0.6
 caching-html-compiler@1.0.6
 callback-hook@1.0.9
@@ -32,6 +34,7 @@ http@1.1.8
 id-map@1.0.8
 insecure@1.0.7
 jquery@1.11.9
+json@1.0.3
 launch-screen@1.0.12
 livedata@1.0.18
 logging@1.1.15
@@ -46,6 +49,7 @@ modules@0.7.6
 modules-runtime@0.7.6
 mongo@1.1.12
 mongo-id@1.0.5
+mrt:bootstrap-3@0.3.8
 npm-mongo@1.5.48
 observe-sequence@1.0.12
 ordered-dict@1.0.8
@@ -63,6 +67,7 @@ standard-minifier-js@1.2.0
 templating@1.1.14
 templating-tools@1.0.4
 tracker@1.1.0
+twbs:bootstrap@3.3.6
 ui@1.0.11
 underscore@1.0.9
 url@1.0.10
