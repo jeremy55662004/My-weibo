@@ -19,8 +19,12 @@
 	    </div>
 	    <ul class="nav navbar-nav">
 	      <li class="{{active.index}}"><a href="/">Home</a></li>
-	      <li class="{{active.login}}"><a href="/login">Login</a></li>
-	      <li class="{{active.reg}}"><a href="/reg">Register</a></li>
+	      {{#if currentUser}}
+	      	<li><a href="/logout">Logout</a></li>
+	      {{else}}
+	      	<li class="{{active.login}}"><a href="/login">Login</a></li>
+	      	<li class="{{active.reg}}"><a href="/reg">Register</a></li>
+	      {{/if}}
 	    </ul>
 	  </div>
 	</nav>

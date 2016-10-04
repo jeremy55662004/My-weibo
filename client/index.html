@@ -7,18 +7,16 @@
 			<a class="btn btn-large" href="/reg">Register now</a>
 		</p>
 	</div>
-	<div class="row">
-		<div class="span4">
-			<h2>Article 1 </h2>
-			<p>This is an first article </p>
-		</div>
-		<div class="span4">
-			<h2> Article 2 </h2>
-			<p>This is an second article</p>
-		</div>
-		<div class="span4">
-			<h2>Aritcle 3 </h2>
-			<p> This is an third article</p>
-		</div>
-	</div>
+	{{# if currentUser}}
+		<form class="well form-inline center" style="text-align: center;">
+			 <input type="text" class="span8" id="post"> 
+				<button id="submit" class="btn btn-success"><i class="icon-comment icon-white"></i> Post</button>
+		</form>
+	{{/if}}
+
+	{{#each posts}}
+		<h2>{{user.username}}</h2>
+		<p class="muted">{{time}}</p>
+		<p>{{#markdown}}{{post}}{{/markdown}}</p>
+	{{/each}}
 </template>
