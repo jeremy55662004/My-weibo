@@ -18,9 +18,9 @@
 	      <a class="navbar-brand" href="/">Webio</a>
 	    </div>
 	    <ul class="nav navbar-nav">
-	      <li class="active"><a href="/">Home</a></li>
-	      <li><a href="/login">Login</a></li>
-	      <li><a href="/reg">Register</a></li>
+	      <li class="{{active.index}}"><a href="/">Home</a></li>
+	      <li class="{{active.login}}"><a href="/login">Login</a></li>
+	      <li class="{{active.reg}}"><a href="/reg">Register</a></li>
 	    </ul>
 	  </div>
 	</nav>
@@ -29,10 +29,31 @@
 
 <template name="container">
 	<div id="container" class="container">
-		{{> index}}
+		{{> info}}
+		{{#if currentUrl.index}}
+			{{> index}}
+		{{/if}}
+
+		{{#if currentUrl.login}}
+			{{> login}}
+		{{/if}}
+
+		{{#if currentUrl.reg}}
+			{{> reg}}
+		{{/if}}
 	</div>
 </template>
 
 <template name="footer">
 	<p class="muted text-center">Jeremy 2016</p>
+</template>
+
+<template name="info">
+	{{#if info.success}}
+		<div class="alert alert-success">{{info.success}}</div>
+	{{/if}}
+
+	{{#if info.error}}
+		<div class="alert alert-danger">{{info.error}}</div>
+	{{/if}}
 </template>
